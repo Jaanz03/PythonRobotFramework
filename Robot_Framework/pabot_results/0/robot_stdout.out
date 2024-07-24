@@ -1,0 +1,25 @@
+==============================================================================
+Python Framework                                                              
+==============================================================================
+Python Framework.HandlingWebTable                                             
+==============================================================================
+Python Framework.HandlingWebTable.DynamicWebTable                             
+==============================================================================
+Fetch data from table                                                 "company name is:"Google-contact name is:"Maria Anders-Country name is:"Germany
+"company name is:"Meta-contact name is:"Francisco Chang-Country name is:"Mexico
+"company name is:"Microsoft-contact name is:"Roland Mendel-Country name is:"Austria
+"company name is:"Island Trading-contact name is:"Helen Bennett-Country name is:"UK
+"company name is:"Adobe-contact name is:"Yoshi Tannamuri-Country name is:"Canada
+"company name is:"Amazon-contact name is:"Giovanni Rovelli-Country name is:"Italy
+| PASS |
+------------------------------------------------------------------------------
+Python Framework.HandlingWebTable.DynamicWebTable                     | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Python Framework.HandlingWebTable                                     | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Python Framework                                                      | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\vjansi\PycharmProjects\Python_Framework\pabot_results\0\output.xml

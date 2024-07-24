@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-25T00:32:40.514376" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase file" source="C:\Users\vjansi\PycharmProjects\Python_Framework\TestCases\Testcase_file.robot">
+<test id="s1-t1" name="Shop Product at E-com App" line="11">
+<kw name="Login To E-commerce Application Page" owner="LoginFunctions">
+<kw name="Login with user username and password" owner="Login">
+<kw name="Open Browser" owner="Login">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:40.815567" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser_name}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-25T00:32:40.815567" elapsed="9.804633"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:50.621196" level="INFO">Opening url 'https://rahulshettyacademy.com/loginpagePractise/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-25T00:32:50.621196" elapsed="0.737194"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.359395" elapsed="0.003981"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HOME_PAGE_LOAD_SCREEN}</arg>
+<arg>timeout=${DEFAULT_TIMEOUT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.364374" elapsed="0.046875"/>
+</kw>
+<status status="PASS" start="2024-07-25T00:32:40.814537" elapsed="10.596712"/>
+</kw>
+<kw name="Enter username and password" owner="Login">
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>NONE</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.412246" elapsed="0.000996"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${INPUT_FIELD_TEXT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.413242" elapsed="0.151611"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${INPUT_FIELD_PASWWORD}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.565841" elapsed="0.057841"/>
+</kw>
+<kw name="Set Log Level" owner="BuiltIn">
+<arg>INFO</arg>
+<doc>Sets the log threshold to the specified level.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.623682" elapsed="0.000997"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2024-07-25T00:32:51.412246" elapsed="0.212433"/>
+</kw>
+<kw name="Select dropdown and accept terms and conditions" owner="Login">
+<kw name="Page Should Contain Element" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:51.638641" level="INFO">Current page contains element '//select[@class='form-control']'.</msg>
+<arg>${INPUT_FIELD_DROPDOWN}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.626678" elapsed="0.012964"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:51.640638" level="INFO">Clicking element '//select[@class='form-control']'.</msg>
+<arg>${INPUT_FIELD_DROPDOWN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.639642" elapsed="0.289696"/>
+</kw>
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:51.929338" level="INFO">Selecting 'user' from radio button 'radio'.</msg>
+<arg>radio</arg>
+<arg>user</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2024-07-25T00:32:51.929338" elapsed="0.234380"/>
+</kw>
+<kw name="Accept message popup" owner="Login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ALERT_POP_UP}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-25T00:32:52.164718" elapsed="0.012701"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:52.189225" level="INFO">${element_text} = You will be limited to only fewer functionalities of the app. Proceed?</msg>
+<var>${element_text}</var>
+<arg>${ALERT_POP_UP}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-25T00:32:52.178412" elapsed="0.010813"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:52.190223" level="INFO">Clicking button '//button[@id='okayBtn']'.</msg>
+<arg>//button[@id='okayBtn']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-25T00:32:52.190223" elapsed="0.225043"/>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${ALERT_POP_UP}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" start="2024-07-25T00:32:52.415266" elapsed="6.166607"/>
+</kw>
+<status status="PASS" start="2024-07-25T00:32:52.163718" elapsed="6.418155"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:58.581873" level="INFO">Selecting options from selection list '//select[@class='form-control']' by value stud.</msg>
+<arg>${INPUT_FIELD_DROPDOWN}</arg>
+<arg>stud</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2024-07-25T00:32:58.581873" elapsed="0.019025"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2024-07-25T00:32:58.600898" level="INFO">Selecting checkbox '//input[@type='checkbox']'.</msg>
+<msg time="2024-07-25T00:32:58.745101" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-92.png"&gt;&lt;img src="selenium-screenshot-92.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-07-25T00:32:58.746088" level="FAIL">ElementClickInterceptedException: Message: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (403,487) because another element &lt;div class="modal-backdrop fade"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:337:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</msg>
+<arg>${SELECT_CHECKBOX}</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="FAIL" start="2024-07-25T00:32:58.600898" elapsed="0.152171">ElementClickInterceptedException: Message: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (403,487) because another element &lt;div class="modal-backdrop fade"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:337:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</status>
+</kw>
+<status status="FAIL" start="2024-07-25T00:32:51.624679" elapsed="7.128390">ElementClickInterceptedException: Message: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (403,487) because another element &lt;div class="modal-backdrop fade"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:337:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</status>
+</kw>
+<kw name="Sign-in and verify sign-in" owner="Login">
+<status status="NOT RUN" start="2024-07-25T00:32:58.753069" elapsed="0.000000"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="FAIL" start="2024-07-25T00:32:40.814537" elapsed="17.938532">ElementClickInterceptedException: Message: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (403,487) because another element &lt;div class="modal-backdrop fade"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:337:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</status>
+</kw>
+<kw name="Sign-in and verify sign-in" owner="Login">
+<status status="NOT RUN" start="2024-07-25T00:32:58.754098" elapsed="0.000000"/>
+</kw>
+<arg>rahulshettyacademy</arg>
+<arg>learning</arg>
+<doc>This keyword is used to login to application</doc>
+<status status="FAIL" start="2024-07-25T00:32:40.814537" elapsed="17.939561">ElementClickInterceptedException: Message: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (403,487) because another element &lt;div class="modal-backdrop fade"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:337:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</status>
+</kw>
+<kw name="Shop products available in dashboard" owner="ShopPageFunctions">
+<arg>Blackberry</arg>
+<doc>This keyword is used to shop products in dashboard</doc>
+<status status="NOT RUN" start="2024-07-25T00:32:58.754098" elapsed="0.000000"/>
+</kw>
+<tag>SMOKE</tag>
+<status status="FAIL" start="2024-07-25T00:32:40.813542" elapsed="17.941521">ElementClickInterceptedException: Message: Element &lt;input id="terms" name="terms" type="checkbox"&gt; is not clickable at point (403,487) because another element &lt;div class="modal-backdrop fade"&gt; obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:193:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:337:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:177:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:136:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:205:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:85:31
+</status>
+</test>
+<doc>To initialize browser</doc>
+<status status="FAIL" start="2024-07-25T00:32:40.518367" elapsed="18.237696"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">SMOKE</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Testcase file">Testcase file</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-07-25T00:32:40.806551" level="ERROR">Error in file 'C:\Users\vjansi\PycharmProjects\Python_Framework\Initialize.robot' on line 6: Invalid resource file extension '.py'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.</msg>
+</errors>
+</robot>

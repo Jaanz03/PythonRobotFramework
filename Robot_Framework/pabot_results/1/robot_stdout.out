@@ -1,0 +1,44 @@
+==============================================================================
+Python Framework                                                              
+==============================================================================
+Python Framework.TestCases                                                    
+==============================================================================
+Python Framework.TestCases.Testcase file :: To initialize browser             
+==============================================================================
+Shop Product at E-com App                                             "Login successfull"
+  
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vjansi\PycharmProjects\Python_Framework\TestCases\Testcase_file.robot:11
+    T:  Shop Product at E-com App    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vjansi\PycharmProjects\Python_Framework\TestCases\Testcase_file.robot:13
+      Login To E-commerce Application Page    rahulshettyacademy    learning
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vjansi\PycharmProjects\Python_Framework\SeleniumWebrdriver\Functions\LoginFunctions.robot:13
+      Sign-in and verify sign-in    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vjansi\PycharmProjects\Python_Framework\SeleniumWebrdriver\Login.robot:54
+          
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\vjansi\PycharmProjects\Python_Framework\SeleniumWebrdriver\Login.robot:55
+      Click Element    ${INPUT_FIELD_SIGNIN}
+      |  ${INPUT_FIELD_SIGNIN} = //input[@type='submit'] (str)
+______________________________________________________________________________
+ERROR:Element with locator '//input[@type='submit']' not found.
+"product names are:iphone X"
+"product names are:Samsung Note 8"
+"product names are:Nokia Edge"
+"product names are:Blackberry"
+| PASS |
+------------------------------------------------------------------------------
+Python Framework.TestCases.Testcase file :: To initialize browser     | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Python Framework.TestCases                                            | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Python Framework                                                      | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\vjansi\PycharmProjects\Python_Framework\pabot_results\1\output.xml

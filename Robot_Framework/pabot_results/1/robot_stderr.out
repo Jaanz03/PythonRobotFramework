@@ -1,0 +1,2 @@
+[ ERROR ] Error in file 'C:\Users\vjansi\PycharmProjects\Python_Framework\Initialize.robot' on line 6: Invalid resource file extension '.py'. Supported extensions are '.json', '.resource', '.rest', '.robot', '.rsrc', '.rst', '.tsv' and '.txt'.
+[ ERROR ] ERROR:Element with locator '//input[@type='submit']' not found.

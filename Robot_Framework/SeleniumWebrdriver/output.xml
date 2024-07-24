@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-12T19:59:37.383264" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\vjansi\PycharmProjects\Python_Framework\SeleniumWebrdriver\Login.robot">
+<test id="s1-t1" name="Validate Login Functionality" line="10">
+<kw name="login to browser">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-12T19:59:37.613976" level="INFO">Creating an instance of the chrome WebDriver.</msg>
+<msg time="2024-07-12T19:59:37.613976" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2024-07-12T19:59:37.613976" level="FAIL">TypeError: 'module' object is not callable</msg>
+<arg>chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="FAIL" start="2024-07-12T19:59:37.613976" elapsed="0.002955">TypeError: 'module' object is not callable</status>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2024-07-12T19:59:37.616931" elapsed="0.000000"/>
+</kw>
+<doc>This keyword is used to login to browser</doc>
+<status status="FAIL" start="2024-07-12T19:59:37.612941" elapsed="0.003990">TypeError: 'module' object is not callable</status>
+</kw>
+<status status="FAIL" start="2024-07-12T19:59:37.612941" elapsed="0.004988">TypeError: 'module' object is not callable</status>
+</test>
+<doc>To initialize browser</doc>
+<status status="FAIL" start="2024-07-12T19:59:37.386256" elapsed="0.232683"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

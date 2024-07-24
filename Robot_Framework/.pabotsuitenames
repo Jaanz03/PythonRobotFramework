@@ -1,0 +1,6 @@
+datasources:47ae429f9b8dd163ba9d0ab99fae25bc429d4e95
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:c14ef6074cbd8410b9cb7685fb67d9e6c85b2b6e
+--suite Python Framework.HandlingWebTable.DynamicWebTable
+--suite Python Framework.TestCases.Testcase file

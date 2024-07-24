@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.2 on win32)" generated="2024-07-24T22:53:43.760581" rpa="false" schemaversion="5">
+<suite id="s1" name="Python Framework" source="C:\Users\vjansi\PycharmProjects\Python_Framework">
+<suite id="s1-s1" name="HandlingWebTable" source="C:\Users\vjansi\PycharmProjects\Python_Framework\HandlingWebTable">
+<suite id="s1-s1-s1" name="DynamicWebTable" source="C:\Users\vjansi\PycharmProjects\Python_Framework\HandlingWebTable\DynamicWebTable.robot">
+<test id="s1-s1-s1-t1" name="Fetch data from table" line="8">
+<kw name="Read Values from Static WebTable">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:53:44.099271" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-07-24T22:53:44.099271" elapsed="8.275144"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:53:52.375412" level="INFO">Opening url 'https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html'</msg>
+<arg>https://www.techlistic.com/2017/02/automate-demo-web-table-with-selenium.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-07-24T22:53:52.375412" elapsed="6.636288"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-07-24T22:53:59.012717" elapsed="0.290940"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>//span[contains(text(),'Demo Webtable 2')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2024-07-24T22:53:59.304654" elapsed="0.562006"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id:customers</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-07-24T22:53:59.867657" elapsed="0.063506"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:00.050350" level="INFO">@{company} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.78")&gt; | &lt;selenium.webdr...</msg>
+<var>@{company}</var>
+<arg>//table[@id='customers']//tr/td[1]/span</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:53:59.931163" elapsed="0.120184"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:00.331700" level="INFO">@{contact} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.84")&gt; | &lt;selenium.webdr...</msg>
+<var>@{contact}</var>
+<arg>//table[@id='customers']//tr/td[2]/span</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:00.052356" elapsed="0.279344"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:00.452452" level="INFO">@{country} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.92")&gt; | &lt;selenium.webdr...</msg>
+<var>@{country}</var>
+<arg>//table[@id='customers']//tr/td[3]/span</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:00.332224" elapsed="0.120228"/>
+</kw>
+<for flavor="IN ZIP">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:00.494864" level="INFO">${company_text} = Google</msg>
+<var>${company_text}</var>
+<arg>${company_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:00.454447" elapsed="0.040417"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:00.664401" level="INFO">${contact_text} = Maria Anders</msg>
+<var>${contact_text}</var>
+<arg>${contact_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:00.494864" elapsed="0.169537"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:10.899610" level="INFO">${country_text} = Germany</msg>
+<var>${country_text}</var>
+<arg>${country_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:00.665402" elapsed="10.235206"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-24T22:54:10.901608" level="INFO">"company name is:"Google-contact name is:"Maria Anders-Country name is:"Germany</msg>
+<arg>"company name is:"${company_text}-contact name is:"${contact_text}-Country name is:"${country_text}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-24T22:54:10.900608" elapsed="0.001994"/>
+</kw>
+<var name="${company_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.78")&gt;</var>
+<var name="${contact_info}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.84")&gt;</var>
+<var name="${country_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.92")&gt;</var>
+<status status="PASS" start="2024-07-24T22:54:00.453450" elapsed="10.449152"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:10.947659" level="INFO">${company_text} = Meta</msg>
+<var>${company_text}</var>
+<arg>${company_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:10.904600" elapsed="0.043059"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:10.977688" level="INFO">${contact_text} = Francisco Chang</msg>
+<var>${contact_text}</var>
+<arg>${contact_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:10.948646" elapsed="0.029042"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:10.996673" level="INFO">${country_text} = Mexico</msg>
+<var>${country_text}</var>
+<arg>${country_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:10.977688" elapsed="0.018985"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-24T22:54:10.998658" level="INFO">"company name is:"Meta-contact name is:"Francisco Chang-Country name is:"Mexico</msg>
+<arg>"company name is:"${company_text}-contact name is:"${contact_text}-Country name is:"${country_text}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-24T22:54:10.997661" elapsed="0.000997"/>
+</kw>
+<var name="${company_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.79")&gt;</var>
+<var name="${contact_info}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.85")&gt;</var>
+<var name="${country_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.93")&gt;</var>
+<status status="PASS" start="2024-07-24T22:54:10.903602" elapsed="0.095056"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.030675" level="INFO">${company_text} = Microsoft</msg>
+<var>${company_text}</var>
+<arg>${company_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:10.999655" elapsed="0.031020"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.049624" level="INFO">${contact_text} = Roland Mendel</msg>
+<var>${contact_text}</var>
+<arg>${contact_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.030675" elapsed="0.018949"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.076805" level="INFO">${country_text} = Austria</msg>
+<var>${country_text}</var>
+<arg>${country_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.050621" elapsed="0.026184"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-24T22:54:11.077787" level="INFO">"company name is:"Microsoft-contact name is:"Roland Mendel-Country name is:"Austria</msg>
+<arg>"company name is:"${company_text}-contact name is:"${contact_text}-Country name is:"${country_text}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.077787" elapsed="0.000997"/>
+</kw>
+<var name="${company_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.80")&gt;</var>
+<var name="${contact_info}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.86")&gt;</var>
+<var name="${country_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.94")&gt;</var>
+<status status="PASS" start="2024-07-24T22:54:10.999655" elapsed="0.079129"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.100725" level="INFO">${company_text} = Island Trading</msg>
+<var>${company_text}</var>
+<arg>${company_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.079781" elapsed="0.020944"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.126661" level="INFO">${contact_text} = Helen Bennett</msg>
+<var>${contact_text}</var>
+<arg>${contact_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.100725" elapsed="0.026929"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.144665" level="INFO">${country_text} = UK</msg>
+<var>${country_text}</var>
+<arg>${country_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.127654" elapsed="0.017011"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-24T22:54:11.145664" level="INFO">"company name is:"Island Trading-contact name is:"Helen Bennett-Country name is:"UK</msg>
+<arg>"company name is:"${company_text}-contact name is:"${contact_text}-Country name is:"${country_text}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.145664" elapsed="0.000995"/>
+</kw>
+<var name="${company_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.81")&gt;</var>
+<var name="${contact_info}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.87")&gt;</var>
+<var name="${country_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.95")&gt;</var>
+<status status="PASS" start="2024-07-24T22:54:11.078784" elapsed="0.067875"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.173661" level="INFO">${company_text} = Adobe</msg>
+<var>${company_text}</var>
+<arg>${company_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.147657" elapsed="0.026004"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.189658" level="INFO">${contact_text} = Yoshi Tannamuri</msg>
+<var>${contact_text}</var>
+<arg>${contact_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.173661" elapsed="0.015997"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.210688" level="INFO">${country_text} = Canada</msg>
+<var>${country_text}</var>
+<arg>${country_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.189658" elapsed="0.021030"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-24T22:54:11.211685" level="INFO">"company name is:"Adobe-contact name is:"Yoshi Tannamuri-Country name is:"Canada</msg>
+<arg>"company name is:"${company_text}-contact name is:"${contact_text}-Country name is:"${country_text}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.210688" elapsed="0.000997"/>
+</kw>
+<var name="${company_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.82")&gt;</var>
+<var name="${contact_info}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.88")&gt;</var>
+<var name="${country_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.96")&gt;</var>
+<status status="PASS" start="2024-07-24T22:54:11.146659" elapsed="0.066023"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.228639" level="INFO">${company_text} = Amazon</msg>
+<var>${company_text}</var>
+<arg>${company_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.212682" elapsed="0.015957"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.246629" level="INFO">${contact_text} = Giovanni Rovelli</msg>
+<var>${contact_text}</var>
+<arg>${contact_info}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.228639" elapsed="0.017990"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-07-24T22:54:11.269637" level="INFO">${country_text} = Italy</msg>
+<var>${country_text}</var>
+<arg>${country_name}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.247619" elapsed="0.022018"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-07-24T22:54:11.271634" level="INFO">"company name is:"Amazon-contact name is:"Giovanni Rovelli-Country name is:"Italy</msg>
+<arg>"company name is:"${company_text}-contact name is:"${contact_text}-Country name is:"${country_text}</arg>
+<arg>console=${True}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-07-24T22:54:11.269637" elapsed="0.001997"/>
+</kw>
+<var name="${company_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.83")&gt;</var>
+<var name="${contact_info}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.89")&gt;</var>
+<var name="${country_name}">&lt;selenium.webdriver.remote.webelement.WebElement (session="c4f3cc6f5f9b54788c88958269a6a11f", element="f.A8AD3FF9122C697C4AF3FA92EE2A0EAE.d.D766A19D8C5A2F15E38F3DBEB51BA2B0.e.97")&gt;</var>
+<status status="PASS" start="2024-07-24T22:54:11.212682" elapsed="0.058952"/>
+</iter>
+<var>${company_name}</var>
+<var>${contact_info}</var>
+<var>${country_name}</var>
+<value>${company}</value>
+<value>${contact}</value>
+<value>${country}</value>
+<status status="PASS" start="2024-07-24T22:54:00.452452" elapsed="10.820175"/>
+</for>
+<status status="PASS" start="2024-07-24T22:53:44.098242" elapsed="27.174385"/>
+</kw>
+<status status="PASS" start="2024-07-24T22:53:44.087137" elapsed="27.185490"/>
+</test>
+<status status="PASS" start="2024-07-24T22:53:43.802433" elapsed="27.472188"/>
+</suite>
+<status status="PASS" start="2024-07-24T22:53:43.799441" elapsed="27.477234"/>
+</suite>
+<status status="PASS" start="2024-07-24T22:53:43.779494" elapsed="27.499154"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Python Framework">Python Framework</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="HandlingWebTable">Python Framework.HandlingWebTable</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="DynamicWebTable">Python Framework.HandlingWebTable.DynamicWebTable</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
