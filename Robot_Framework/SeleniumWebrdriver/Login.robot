@@ -2,6 +2,7 @@
 Library         SeleniumLibrary
 Library         String
 Library         ../CustomLibraries/Customlib.py
+Library         OperatingSystem
 
 
 #Library         DataDriver      file=readingcsv.csv     encoding=utf_8
@@ -10,6 +11,17 @@ Library         ../CustomLibraries/Customlib.py
 
 
 *** Keywords ***
+Test initialize
+    [Arguments]     ${clean_report_folder}=Y
+    IF  '${clean_report_folder}'=='Y'
+        Empty Directory     ${CURDIR}/./../reports
+        log    Delete Old Screenshots    console=${True}
+    END
+
+
+Test CleanUp
+    close browser
+
 Login with user username and password
     [Arguments]   ${username}   ${password}
     Open Browser
