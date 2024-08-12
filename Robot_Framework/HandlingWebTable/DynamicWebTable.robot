@@ -6,7 +6,7 @@ Library    String
 
 *** Test Cases ***
 Fetch data from table
-#    Read values from DataWebtable
+    Read values from DataWebtable
     Read Values from Static WebTable
 
 *** Variables ***

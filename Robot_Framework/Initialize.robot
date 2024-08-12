@@ -7,3 +7,4 @@ Resource        ./CustomLibraries/Customlib.py
 Resource        ./Variables/Variables.robot
 Resource        ./SeleniumWebrdriver/Locators/ShopPageLocators.robot
 Resource        ./SeleniumWebrdriver/Locators/LoginLocators.robot
+Resource        ./API/APIkeyword.robot
